@@ -1,0 +1,14 @@
+<h2><a href="https://www.geeksforgeeks.org/problems/water-connection-problem5822/1?sortBy=submissions&category%255B%255D=Graph&page=3&difficulty%255B%255D=1">Water Connection Problem</a></h2><h3>Difficulty Level : Difficulty: Hard</h3><hr><div class="problems_problem_content__Xm_eO" style="--text-color: var(--problem-text-color);"><p><span style="font-size: 18.6667px;">Given <strong>n </strong>houses (numbered 1 to n) and <strong>p</strong> pipes connecting them, where each pipe is described by <strong>a[i]</strong>, <strong>b[i]</strong>, and <strong>d[i] </strong>-&nbsp;a pipe of <strong>diameter d[i] </strong>running from <strong>house a[i]</strong> to <strong>house b[i]</strong>.</span></p>
+<ul>
+<li><span style="font-size: 18.6667px;">Every house has at most one outgoing pipe and at most one incoming pipe.</span></li>
+<li><span style="font-size: 18.6667px;">A house with an outgoing pipe but no incoming pipe gets a <strong>tank</strong> installed (start of a chain).</span></li>
+<li><span style="font-size: 18.6667px;">A house with an incoming pipe but no outgoing pipe gets a <strong>tap</strong> installed (end of a chain).</span></li>
+</ul>
+<p><span style="font-size: 18.6667px;">Find every tank-tap pair, along with the minimum pipe diameter along the chain connecting them.</span></p>
+<p><span style="font-size: 18.6667px;"><strong>Note:</strong> </span><span style="font-size: 18.6667px;">Return a list of <strong>[tank, tap, minimum diameter]</strong> triples, sorted by tank number in ascending order.</span></p>
+<p><span style="font-size: 18px;"><strong>Examples:</strong></span></p>
+<pre><span style="font-size: 14pt;"><strong>Input: </strong>n = 9, p = 6, a[] = [7, 5, 4, 2, 9, 3], b[] = [4, 9, 6, 8, 7, 1], d[] = [98, 72, 10, 22, 17, 66]<strong>
+Output: </strong>[[2, 8, 22], [3, 1, 66], [5, 6, 10]]<br><strong>Explanation:</strong> There are three separate chains: 3 -&gt; 1, 5 -&gt; 9 -&gt; 7 -&gt; 4 -&gt; 6, and 2 -&gt; 8. <br>Tracing each from tank to tap: chain 3 -&gt; 1 has diameter 66, chain 5 -&gt; 9 -&gt; 7 -&gt; 4 -&gt; 6 has a minimum diameter of 10 (the 4 -&gt; 6 pipe), and chain 2 -&gt; 8 has diameter 22.</span></pre>
+<pre><span style="font-size: 14pt;"><span style="font-size: 14pt;"><strong>Input: </strong>n = 4, p = 2, a[] = [1, 3], b[] = [2, 4], d[] = [60, 50]
+<strong>Output: </strong>[[1, 2, 60], [3, 4, 50]]<br><strong>Explanation:</strong> There are two separate chains: 1 -&gt; 2 and 3 -&gt; 4. Each chain has only one pipe, so its minimum diameter is just that pipe's diameter: 60 and 50 respectively.</span></span></pre>
+<p><span style="font-size: 14pt;"><strong>Constraints:<br></strong>2 ≤ n ≤ 10<sup>5</sup><br>1 ≤ p ≤ n - 1<br>1 ≤ a[i], b[i] ≤ n<br>1 ≤ d[i] ≤ 10<sup>9</sup></span></p></div><br><p><span style=font-size:18px><strong>Topic Tags : </strong><br><code>Greedy</code>&nbsp;<code>DFS</code>&nbsp;<code>Graph</code>&nbsp;
